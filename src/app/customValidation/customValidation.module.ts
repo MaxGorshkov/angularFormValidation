@@ -1,22 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AppComponent } from './app.component';
-import { AppCustomValidationModule } from './customValidation/customValidation.module';
 import { FormsModule } from '@angular/forms';
+
+import { AppCustomValidationDirective } from './customValidation.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppCustomValidationDirective
   ],
   imports: [
     CommonModule,
     BrowserModule,
-    AppCustomValidationModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+    AppCustomValidationDirective
+  ]
 })
-export class AppModule { }
+export class AppCustomValidationModule { }
